@@ -1,0 +1,313 @@
+EESchema Schematic File Version 4
+LIBS:bolletjes-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L ESP8266:ESP-01v090 U1
+U 1 1 5E1128E7
+P 3300 2550
+F 0 "U1" H 3300 3065 50  0000 C CNN
+F 1 "ESP-01v090" H 3300 2974 50  0000 C CNN
+F 2 "ESP8266:ESP-01" H 3300 2550 50  0001 C CNN
+F 3 "http://l0l.org.uk/2014/12/esp8266-modules-hardware-guide-gotta-catch-em-all/" H 3300 2550 50  0001 C CNN
+	1    3300 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5E1129A8
+P 4200 2150
+F 0 "#PWR0101" H 4200 1900 50  0001 C CNN
+F 1 "GND" V 4205 2022 50  0000 R CNN
+F 2 "" H 4200 2150 50  0001 C CNN
+F 3 "" H 4200 2150 50  0001 C CNN
+	1    4200 2150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+5V #PWR0103
+U 1 1 5E17A54B
+P 3500 1100
+F 0 "#PWR0103" H 3500 950 50  0001 C CNN
+F 1 "+5V" V 3515 1228 50  0000 L CNN
+F 2 "" H 3500 1100 50  0001 C CNN
+F 3 "" H 3500 1100 50  0001 C CNN
+	1    3500 1100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+3.3V #PWR0104
+U 1 1 5E17A5AA
+P 4100 1100
+F 0 "#PWR0104" H 4100 950 50  0001 C CNN
+F 1 "+3.3V" V 4115 1228 50  0000 L CNN
+F 2 "" H 4100 1100 50  0001 C CNN
+F 3 "" H 4100 1100 50  0001 C CNN
+	1    4100 1100
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3.3V #PWR0105
+U 1 1 5E17A614
+P 2350 2700
+F 0 "#PWR0105" H 2350 2550 50  0001 C CNN
+F 1 "+3.3V" V 2365 2828 50  0000 L CNN
+F 2 "" H 2350 2700 50  0001 C CNN
+F 3 "" H 2350 2700 50  0001 C CNN
+	1    2350 2700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+3.3V #PWR0106
+U 1 1 5E17A63D
+P 2350 2500
+F 0 "#PWR0106" H 2350 2350 50  0001 C CNN
+F 1 "+3.3V" V 2365 2628 50  0000 L CNN
+F 2 "" H 2350 2500 50  0001 C CNN
+F 3 "" H 2350 2500 50  0001 C CNN
+	1    2350 2500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Transistor_FET:2N7000 Q1
+U 1 1 5E17A6D7
+P 4850 1700
+F 0 "Q1" H 5055 1746 50  0000 L CNN
+F 1 "2N7000" H 5055 1655 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5050 1625 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 4850 1700 50  0001 L CNN
+	1    4850 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 5E17A7D2
+P 4950 1900
+F 0 "#PWR0107" H 4950 1650 50  0001 C CNN
+F 1 "GND" H 4950 1750 50  0000 C CNN
+F 2 "" H 4950 1900 50  0001 C CNN
+F 3 "" H 4950 1900 50  0001 C CNN
+	1    4950 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 5E17A89D
+P 6700 1050
+F 0 "D1" H 6692 795 50  0000 C CNN
+F 1 "LED" H 6692 886 50  0000 C CNN
+F 2 "LED_THT:LED_D1.8mm_W3.3mm_H2.4mm" H 6700 1050 50  0001 C CNN
+F 3 "~" H 6700 1050 50  0001 C CNN
+	1    6700 1050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4650 1700 4650 2500
+NoConn ~ 4250 2600
+NoConn ~ 4250 2700
+NoConn ~ 2350 2400
+NoConn ~ 2350 2600
+Connection ~ 4250 2500
+Wire Wire Line
+	4250 2500 4650 2500
+Wire Wire Line
+	4200 2500 4250 2500
+Wire Wire Line
+	4250 2400 4250 2200
+Wire Wire Line
+	4250 2200 4200 2200
+Wire Wire Line
+	4200 2200 4200 2150
+Wire Wire Line
+	3800 2150 4200 2150
+Wire Wire Line
+	3800 1400 3800 2150
+Connection ~ 4200 2150
+$Comp
+L Connector:Jack-DC J1
+U 1 1 5E17B2EB
+P 2400 1300
+F 0 "J1" H 2455 1625 50  0000 C CNN
+F 1 "Jack-DC" H 2455 1534 50  0000 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_Horizontal" H 2450 1260 50  0001 C CNN
+F 3 "~" H 2450 1260 50  0001 C CNN
+	1    2400 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 1200 3500 1200
+Wire Wire Line
+	3500 1200 3500 1100
+Wire Wire Line
+	2700 1400 3800 1400
+Connection ~ 4100 1100
+Connection ~ 3500 1100
+Connection ~ 3800 1400
+$Comp
+L Regulator_Linear:AMS1117 U2
+U 1 1 5E17A455
+P 3800 1100
+F 0 "U2" H 3800 1342 50  0000 C CNN
+F 1 "AMS1117" H 3800 1251 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 3800 1300 50  0001 C CNN
+F 3 "http://www.advanced-monolithic.com/pdf/ds1117.pdf" H 3900 850 50  0001 C CNN
+	1    3800 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J2
+U 1 1 5E30B9F7
+P 5300 1100
+F 0 "J2" H 5380 1092 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 5380 1001 50  0000 L CNN
+F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type011_RT05502HBWC_1x02_P5.00mm_Horizontal" H 5300 1100 50  0001 C CNN
+F 3 "~" H 5300 1100 50  0001 C CNN
+	1    5300 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 1100 5100 1100
+Wire Wire Line
+	5100 1200 4950 1200
+Wire Wire Line
+	4950 1200 4950 1500
+Wire Wire Line
+	5500 1100 6450 1100
+Wire Wire Line
+	6450 1100 6450 900 
+Wire Wire Line
+	6450 900  6700 900 
+Wire Wire Line
+	6700 1200 5500 1200
+$Comp
+L Device:LED D2
+U 1 1 5E30CD17
+P 6900 1050
+F 0 "D2" H 6892 795 50  0000 C CNN
+F 1 "LED" H 6892 886 50  0000 C CNN
+F 2 "LED_THT:LED_D1.8mm_W3.3mm_H2.4mm" H 6900 1050 50  0001 C CNN
+F 3 "~" H 6900 1050 50  0001 C CNN
+	1    6900 1050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D3
+U 1 1 5E30CE6E
+P 7100 1050
+F 0 "D3" H 7092 795 50  0000 C CNN
+F 1 "LED" H 7092 886 50  0000 C CNN
+F 2 "LED_THT:LED_D1.8mm_W3.3mm_H2.4mm" H 7100 1050 50  0001 C CNN
+F 3 "~" H 7100 1050 50  0001 C CNN
+	1    7100 1050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D4
+U 1 1 5E30CFC3
+P 7300 1050
+F 0 "D4" H 7292 795 50  0000 C CNN
+F 1 "LED" H 7292 886 50  0000 C CNN
+F 2 "LED_THT:LED_D1.8mm_W3.3mm_H2.4mm" H 7300 1050 50  0001 C CNN
+F 3 "~" H 7300 1050 50  0001 C CNN
+	1    7300 1050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D5
+U 1 1 5E30D3B1
+P 7450 1050
+F 0 "D5" H 7442 795 50  0000 C CNN
+F 1 "LED" H 7442 886 50  0000 C CNN
+F 2 "LED_THT:LED_D1.8mm_W3.3mm_H2.4mm" H 7450 1050 50  0001 C CNN
+F 3 "~" H 7450 1050 50  0001 C CNN
+	1    7450 1050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D6
+U 1 1 5E30D50A
+P 7600 1050
+F 0 "D6" H 7592 795 50  0000 C CNN
+F 1 "LED" H 7592 886 50  0000 C CNN
+F 2 "LED_THT:LED_D1.8mm_W3.3mm_H2.4mm" H 7600 1050 50  0001 C CNN
+F 3 "~" H 7600 1050 50  0001 C CNN
+	1    7600 1050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D7
+U 1 1 5E30D663
+P 7750 1050
+F 0 "D7" H 7742 795 50  0000 C CNN
+F 1 "LED" H 7742 886 50  0000 C CNN
+F 2 "LED_THT:LED_D1.8mm_W3.3mm_H2.4mm" H 7750 1050 50  0001 C CNN
+F 3 "~" H 7750 1050 50  0001 C CNN
+	1    7750 1050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D8
+U 1 1 5E30D7BE
+P 7900 1050
+F 0 "D8" H 7892 795 50  0000 C CNN
+F 1 "LED" H 7892 886 50  0000 C CNN
+F 2 "LED_THT:LED_D1.8mm_W3.3mm_H2.4mm" H 7900 1050 50  0001 C CNN
+F 3 "~" H 7900 1050 50  0001 C CNN
+	1    7900 1050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7900 900  7750 900 
+Connection ~ 6700 900 
+Connection ~ 6900 900 
+Wire Wire Line
+	6900 900  6700 900 
+Connection ~ 7100 900 
+Wire Wire Line
+	7100 900  6900 900 
+Connection ~ 7300 900 
+Wire Wire Line
+	7300 900  7100 900 
+Connection ~ 7450 900 
+Wire Wire Line
+	7450 900  7300 900 
+Connection ~ 7600 900 
+Wire Wire Line
+	7600 900  7450 900 
+Connection ~ 7750 900 
+Wire Wire Line
+	7750 900  7600 900 
+Wire Wire Line
+	7900 1200 7750 1200
+Connection ~ 6700 1200
+Connection ~ 6900 1200
+Wire Wire Line
+	6900 1200 6700 1200
+Connection ~ 7100 1200
+Wire Wire Line
+	7100 1200 6900 1200
+Connection ~ 7300 1200
+Wire Wire Line
+	7300 1200 7100 1200
+Connection ~ 7450 1200
+Wire Wire Line
+	7450 1200 7300 1200
+Connection ~ 7600 1200
+Wire Wire Line
+	7600 1200 7450 1200
+Connection ~ 7750 1200
+Wire Wire Line
+	7750 1200 7600 1200
+$EndSCHEMATC
