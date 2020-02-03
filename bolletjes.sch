@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L ESP8266:ESP-01v090 U1
+L bolletjes-rescue:ESP-01v090-ESP8266 U1
 U 1 1 5E1128E7
 P 3300 2550
 F 0 "U1" H 3300 3065 50  0000 C CNN
@@ -81,17 +81,6 @@ F 3 "" H 2350 2500 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Transistor_FET:2N7000 Q1
-U 1 1 5E17A6D7
-P 4850 1700
-F 0 "Q1" H 5055 1746 50  0000 L CNN
-F 1 "2N7000" H 5055 1655 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5050 1625 50  0001 L CIN
-F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 4850 1700 50  0001 L CNN
-	1    4850 1700
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR0107
 U 1 1 5E17A7D2
 P 4950 1900
@@ -132,8 +121,6 @@ Wire Wire Line
 	4200 2200 4200 2150
 Wire Wire Line
 	3800 2150 4200 2150
-Wire Wire Line
-	3800 1400 3800 2150
 Connection ~ 4200 2150
 $Comp
 L Connector:Jack-DC J1
@@ -150,11 +137,8 @@ Wire Wire Line
 	2700 1200 3500 1200
 Wire Wire Line
 	3500 1200 3500 1100
-Wire Wire Line
-	2700 1400 3800 1400
 Connection ~ 4100 1100
 Connection ~ 3500 1100
-Connection ~ 3800 1400
 $Comp
 L Regulator_Linear:AMS1117 U2
 U 1 1 5E17A455
@@ -310,4 +294,35 @@ Wire Wire Line
 Connection ~ 7750 1200
 Wire Wire Line
 	7750 1200 7600 1200
+$Comp
+L Transistor_FET:BS170 Q1
+U 1 1 5E389A4F
+P 4850 1700
+F 0 "Q1" H 5055 1746 50  0000 L CNN
+F 1 "BS170" H 5055 1655 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5050 1625 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BS/BS170.pdf" H 4850 1700 50  0001 L CNN
+	1    4850 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5E389C56
+P 3800 1550
+F 0 "C1" H 3915 1596 50  0000 L CNN
+F 1 "22µF" H 3915 1505 50  0000 L CNN
+F 2 "" H 3838 1400 50  0001 C CNN
+F 3 "~" H 3800 1550 50  0001 C CNN
+	1    3800 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 1400 3500 1400
+Wire Wire Line
+	3500 1400 3500 1700
+Wire Wire Line
+	3500 1700 3800 1700
+Wire Wire Line
+	3800 1700 3800 2150
+Connection ~ 3800 1700
 $EndSCHEMATC

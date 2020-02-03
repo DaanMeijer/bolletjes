@@ -1,2 +1,3 @@
 (sym_lib_table
+  (lib (name bolletjes-rescue)(type Legacy)(uri ${KIPRJMOD}/bolletjes-rescue.lib)(options "")(descr ""))
 )
